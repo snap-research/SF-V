@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+  <meta property="og:url" content="URL OF THE WEBSITE" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>SF-V</title>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">SF-V: Single Forward Video Generation Model</h1>
+          <div class="is-size-5 publication-authors">
+            <!-- Paper authors -->
+            <span class="author-block">
+              <a href="https://zhang-zx.github.io/" target="_blank">Zhixing Zhang</a><sup>1,2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=XUj8koUAAAAJ" target="_blank">Yanyu Li</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=3hEDsFYAAAAJ" target="_blank">Yushu Wu</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://xuyanwu.github.io/" target="_blank">Yanwu Xu</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://anilkagak2.github.io/" target="_blank">Anil Kag</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://universome.github.io/" target="_blank">Ivan Skorokhodov</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=31ha1LgAAAAJ" target="_blank">Willi Menapace</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://aliaksandrsiarohin.github.io/aliaksandr-siarohin-website/" target="_blank">Aliaksandr Siarohin</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=BV98MGAAAAAJ" target="_blank">Junli Cao</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://people.cs.rutgers.edu/~dnm/" target="_blank">Dimitris Metaxas</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="http://www.stulyakov.com/" target="_blank">Sergey Tulyakov</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://alanspike.github.io/" target="_blank">Jian Ren</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Snap Inc.,</span>
+            <span class="author-block"><sup>2</sup>Rutgers University</span>
+          </div>
+
+          
+          
+          <div class="column has-text-centered">
+            <div class="publication-links">
+
+              <!-- ArXiv Link -->
+              <span class="link-block">
+                <a href="" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+
+              <!-- Github link -->
+              <span class="link-block">
+                <a href="https://github.com/snap-research/SF-V" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="./supp_index.html" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-link"></i>
+                  </span>
+                  <span>Supplementary</span>
+                </a>
+              </span>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Teaser image-->
+  <!-- <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <div width="100%" style="font-size: 20px; text-align: center;">
+          <b>TL;DR</b>: SF-V is a video generation method that </br>
+          can generate high-quality and motion consistent videos </br>
+           by only performing the sampling once during inference.
+        </div>
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="video-wrapper">
+              <video preload="auto" src="assets/videos/record_720p.mp4" autoplay loop muted></video>
+            </div>
+            
+          </div>
+      </div>
+    </div>
+  </section> -->
+  <!-- End teaser image -->
+  
+
+  <section class="hero teaser">
+    <div class="hero-body ">
+    <div class="container is-max-desktop" width="80%">
+      <div width="100%" style="font-size: 20px; text-align: center;">
+        <b>TL;DR</b>: SF-V is a video generation method that can generate high-quality and motion consistent videos by only performing the sampling once during inference.
+      </div>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="header-video1" autoplay muted loop playsinline height="100%" src="./assets/videos/0_qualitative/05ca4173-1c47-4191-9813-d44c18e5cba5_1_steps.mp4">
+          </video>
+
+      </h2>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="header-video2" autoplay muted loop playsinline height="100%" src="./assets/videos/0_qualitative/getty_1268957634_1_1_steps.mp4">
+          </video>
+      </h2>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="header-video3" autoplay muted loop playsinline height="100%"  src="./assets/videos/0_qualitative/5fbbf2ae-5b99-4186-ad64-96fd5fdbd4e2_1_steps.mp4">
+          </video>
+      </h2>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+<!-- End Subject Driven Video Generation carousel -->
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Diffusion models have demonstrated remarkable success in generating high-quality videos through iterative denoising processes. 
+              However, these models typically require multiple denoising steps for sampling, resulting in high computational costs. 
+              In this work, we propose a novel approach of <em>single</em>-step video generation by leveraging adversarial distillation in video diffusion models. 
+              Our method builds upon the Stable-Video-Diffusion (SVD) framework, utilizing a generative adversarial network (GAN) to 
+              distill the complex multi-step denoising process of the diffusion model into a <em>single</em> forward pass. 
+              The GAN is trained to mimic the final output of the diffusion model, capturing both temporal and spatial dependencies in the video data. 
+              Extensive experiments demonstrate that our method achieves competitive quality for synthesized videos with significantly reduced computational 
+              overhead (<em>i.e.</em>, around 23x speedup compared with SVD and 6x speedup compared with existing works with even better generation quality), 
+              paving the way for real-time video synthesis. 
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+  <!-- Paper poster -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-">
+            <h2 class="title is-3">Method</h2>
+            <div class="content has-text-justified">
+              <table width="100%" border="0">
+                <tbody>
+                  <tr>
+                    <td colspan="3">
+                      <p>
+                        We initialize our generator and discriminator using the weights of a pre-trained image-to-video diffusion model. 
+                        The discriminator utilizes the encoder part of the UNet as its backbone, which remains <em>frozen</em> during training.
+                        We add a spatial discriminator head and a temporal discriminator head after each downsampling block of the discriminator backbone and only update the parameters of these heads during training.
+                      </p>
+                      <p>
+                        Our discriminator heads take in intermediate features of the UNet encoder. 
+                        <b>Left:</b> For spatial discriminator heads, the input features are reshaped to merge the temporal axis and the batch axis, 
+                        such that each frame is considered as an independent sample.
+                        <b>Right:</b> For temporal discriminator heads, we merge spatial dimensions to batch axis.
+                      </p>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td colspan="2" width="60%">
+                      <img src="assets/images/overview.png" alt="" width="100%">
+                    </td>
+                    <td colspan="1">
+                      <img src="assets/images/head.png" alt="" width="100%">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" style="font-size: 16px; text-align: center;"> <b>Overview of our method.</b>  </td>
+                    <td colspan="1" style="font-size: 16px; text-align: center;"> <b>Discriminator heads.</b>  </td>
+                  </tr>
+
+
+                </tbody>
+
+              </table>
+
+            </div>
+          </div>
+  </section>
+  <!--End paper poster -->
+
+  <!-- Video grid -->
+  <section class="hero is-light">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column">
+            <h2 class="title is-3">Visualization Results</h2>
+            <div class="content has-text-justified">
+              <!-- </td> -->
+
+              <div class="video-grid-wide"> 
+                <div class="video-wrapper">
+                  <video preload="auto"  src="./assets/videos/0_qualitative/8ec23fde-8928-458d-8b59-308008667efc_1_steps.mp4"
+                    preload="metadata" autoplay controls loop muted></video>
+                </div>
+                <div class="video-wrapper" >
+                  <video preload="auto"  src="./assets/videos/0_qualitative/7d90a98d-bd4d-4d97-8db7-7ccf17b16ba9_1_steps.mp4"
+                    preload="metadata" autoplay controls loop muted></video>
+                </div>
+                <div class="video-wrapper">
+                  <video preload="auto"  src="./assets/videos/0_qualitative/8fa6abad-1153-4966-ae6a-ef00fddc14f9_1_steps.mp4"
+                    preload="metadata" autoplay controls loop muted></video>
+                </div>
+                
+              </div>
+
+              <div class="video-grid-wide"> 
+                <div class="video-wrapper">
+                  <video preload="auto"  src="./assets/videos/0_qualitative/0d211ab9-c214-4475-ab98-f17544dd1e84_1_steps.mp4"
+                    preload="metadata" autoplay controls loop muted></video>
+                </div>
+                <div class="video-wrapper" >
+                  <video preload="auto"  src="./assets/videos/0_qualitative/01bf2c0f-7a48-4229-9dd6-ff5c606c59f4_1_steps.mp4"
+                    preload="metadata" autoplay controls loop muted></video>
+                </div>
+                <div class="video-wrapper">
+                  <video preload="auto"  src="./assets/videos/0_qualitative/01cd2449-bbce-4827-8466-672e3f7fd4bf_1_steps.mp4"
+                    preload="metadata" autoplay controls loop muted></video>
+                </div>
+                
+              </div>
+
+              <div class="video-grid-wide"> 
+                <div class="video-wrapper">
+                  <video preload="auto"  src="./assets/videos/0_qualitative/76d3ede7-bb65-4ac6-bc65-a69b5e6ccf95_1_steps.mp4"
+                    preload="metadata" autoplay controls loop muted></video>
+                </div>
+                <div class="video-wrapper">
+                  <video preload="auto"  src="./assets/videos/0_qualitative/32a8f7d3-68b8-4731-ad6b-2995fec8f09b_1_steps.mp4"
+                    preload="metadata" autoplay controls loop muted></video>
+                </div>
+                <div class="video-wrapper">
+                  <video preload="auto"  src="./assets/videos/0_qualitative/2f6f94e6-0f67-4ad8-8214-74b05d02af29_1_steps.mp4"
+                    preload="metadata" autoplay controls loop muted></video>
+                </div>
+                <!-- <div class="video-wrapper">
+
+                  <video preload="auto"  src="./assets/videos/0_qualitative/92eff689-7962-48b6-973a-8dc88404fab6_1_steps.mp4"
+                    preload="metadata" autoplay controls loop muted></video>
+                </div> -->
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+              
+
+  </section>
+  <!-- End video preload="auto"grid -->
+
+
+
+
+  <!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre>
+        <code>
+          
+        </code>
+      </pre>
+    </div>
+  </section>
+  <!--End BibTex citation -->
+
+
+  <section class="hero is-small">
+    <div class="hero-body">
+      <footer class="footer">
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column is-8">
+              <div class="content">
+
+                <p>
+                  This website is borrowed from <a href="https://diffusion-tokenflow.github.io/"
+                    target="_blank">here</a>.
+                </p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </footer>
+    </div>
+
+
+    <!-- Statcounter tracking code -->
+
+    <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        const videoWrappers = document.querySelectorAll('.video-wrapper');
+
+        videoWrappers.forEach(wrapper => {
+          const defaultVideo = wrapper.querySelector('.default-video');
+          const aspectRatio = defaultVideo.videoWidth / defaultVideo.videoHeight;
+          const height = wrapper.offsetWidth / aspectRatio;
+
+          wrapper.style.height = `${height}px`;
+
+          wrapper.addEventListener('mouseenter', () => {
+            defaultVideo.pause();
+            hoverVideo.play();
+          });
+
+          wrapper.addEventListener('mouseleave', () => {
+            defaultVideo.play();
+            hoverVideo.pause();
+          });
+        });
+      });
+      $(document).ready(function () {
+        var carouselItems = $('.carousel .item');
+        var numItems = carouselItems.length;
+        var numVideos = 5;
+        var currentIndex = 0;
+
+        $('.carousel').on('click', function () {
+          currentIndex++;
+          if (currentIndex + numVideos <= numItems) {
+            carouselItems.removeClass('active');
+            carouselItems.slice(currentIndex, currentIndex + numVideos).addClass('active');
+          } else {
+            currentIndex = 0;
+            carouselItems.removeClass('active');
+            carouselItems.slice(currentIndex, currentIndex + numVideos).addClass('active');
+          }
+        });
+
+        carouselItems.slice(currentIndex, currentIndex + numVideos).addClass('active');
+      });
+    </script>
+</body>
+
+</html>

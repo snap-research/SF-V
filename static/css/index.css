@@ -158,6 +158,20 @@ body {
   font-size: smaller;
 }
 
+.video-teaser-container {
+  position: relative;
+  width: 25%;
+  margin: 0%;
+  overflow: hidden;
+  cursor: pointer;
+ }
+ 
+ .video-teaser {
+  width: 100%;
+  height: auto;
+  filter: brightness(0.7);
+  transition: filter 0.3s ease-in-out;
+ }
 
 
 /* video grid  */

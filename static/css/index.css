@@ -169,7 +169,7 @@ body {
  .video-teaser {
   width: 100%;
   height: auto;
-  filter: brightness(0.7);
+  filter: brightness(100%);
   transition: filter 0.3s ease-in-out;
  }
 

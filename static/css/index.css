@@ -354,3 +354,12 @@ body {
   width: 100% !important;
   height: 100% !important;
 }
+
+table
+{
+    table-layout: fixed;
+}
+td
+{
+    word-wrap:break-word;
+}

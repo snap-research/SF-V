@@ -133,14 +133,14 @@
                 </a>
               </span>
 
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="./supp_index.html" target="_blank" class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="fas fa-link"></i>
                   </span>
                   <span>Supplementary</span>
                 </a>
-              </span>
+              </span> -->
 
             </div>
           </div>
@@ -302,23 +302,23 @@
 </div>
 
   <!-- Paper abstract -->
-  <section class="section hero is-light">
-    <div class="container is-max-desktop">
+  <section class="section hero is-light" style="margin-top: -6px;" >
+    <div class="container is-max-desktop" >
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
 
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Diffusion models have demonstrated remarkable success in generating high-quality videos through iterative denoising processes. 
-              However, these models typically require multiple denoising steps for sampling, resulting in high computational costs. 
-              In this work, we propose a novel approach of <em>single</em>-step video generation by leveraging adversarial distillation in video diffusion models. 
-              Our method builds upon the Stable-Video-Diffusion (SVD) framework, utilizing a generative adversarial network (GAN) to 
-              distill the complex multi-step denoising process of the diffusion model into a <em>single</em> forward pass. 
-              The GAN is trained to mimic the final output of the diffusion model, capturing both temporal and spatial dependencies in the video data. 
-              Extensive experiments demonstrate that our method achieves competitive quality for synthesized videos with significantly reduced computational 
-              overhead (<em>i.e.</em>, around 23x speedup compared with SVD and 6x speedup compared with existing works with even better generation quality), 
-              paving the way for real-time video synthesis. 
+              Diffusion-based video generation models have demonstrated remarkable success in obtaining high-fidelity videos through the iterative denoising process. 
+              However, these models require multiple denoising steps during sampling, resulting in high computational costs. 
+              In this work, we propose a novel approach to obtain <em>single</em>-step video generation models by leveraging adversarial training to fine-tune pre-trained video diffusion models. 
+              We show that, through the adversarial training, the multi-steps video diffusion model, <em>i.e.</em>, Stable Video Diffusion (SVD), 
+              can be trained to perform <em>single</em> forward pass to synthesize high-quality videos, 
+              capturing both temporal and spatial dependencies in the video data.
+              Extensive experiments demonstrate that our method achieves competitive generation quality of synthesized 
+              videos with significantly reduced computational overhead for the denoising process (<em>i.e.</em>, around 23x speedup compared with SVD and 6x speedup compared with existing works, 
+              with even better generation quality), paving the way for real-time video synthesis and editing.
             </p>
           </div>
         </div>
@@ -375,10 +375,345 @@
             </div>
           </div>
   </section>
+
+  <section class="section hero is-light">
+    <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-">
+
+          <h2 class="title is-3">Comparisons</h2>
+          <div class="content has-text-justified">
+            <table width="100%" border="0" align="center">
+              <tbody>
+                <tr>
+                  <td colspan="5" style="text-align: left;">
+                    <b>In this section, we provide video comparison results of our method with others as mentioned in the paper.</b>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/1_comparison/SVD/bird-8014191_1280_25_steps.mp4"></video>
+                  </td>
+                  <td>
+                    <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/1_comparison/SVD/bird-8014191_1280_25_steps.mp4"></video>
+                  </td>
+                  <td>
+                    <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/1_comparison/SVD/bird-8014191_1280_8_steps.mp4"></video>
+                  </td>
+                  <td>
+                    <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/1_comparison/AnimateLCM/bird-8014191_1280_4_steps.mp4"></video>
+                  </td>
+                  <td>
+                    <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/1_comparison/GAN/bird-8014191_1280_1_steps.mp4"></video>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/1_comparison/SVD/dog-7396912_1280_25_steps.mp4"></video>
+                  </td>
+                  <td>
+                    <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/1_comparison/SVD/dog-7396912_1280_16_steps.mp4"></video>
+                  </td>
+                  <td>
+                    <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/1_comparison/SVD/dog-7396912_1280_8_steps.mp4"></video>
+                  </td>
+                  <td>
+                    <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/1_comparison/AnimateLCM/dog-7396912_1280_4_steps.mp4"></video>
+                  </td>
+                  <td>
+                    <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/1_comparison/GAN/dog-7396912_1280_1_steps.mp4"></video>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/1_comparison/SVD/girl-4898696_1280_25_steps.mp4"></video>
+                  </td>
+                  <td>
+                    <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/1_comparison/SVD/girl-4898696_1280_16_steps.mp4"></video>
+                  </td>
+                  <td>
+                    <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/1_comparison/SVD/girl-4898696_1280_8_steps.mp4"></video>
+                  </td>
+                  <td>
+                    <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/1_comparison/AnimateLCM/girl-4898696_1280_4_steps.mp4"></video>
+                  </td>
+                  <td>
+                    <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/1_comparison/GAN/girl-4898696_1280_1_steps.mp4"></video>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/1_comparison/SVD/leaf-7260246_1280_25_steps.mp4"></video>
+                  </td>
+                  <td>
+                    <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/1_comparison/SVD/leaf-7260246_1280_16_steps.mp4"></video>
+                  </td>
+                  <td>
+                    <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/1_comparison/SVD/leaf-7260246_1280_8_steps.mp4"></video>
+                  </td>
+                  <td>
+                    <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/1_comparison/AnimateLCM/leaf-7260246_1280_4_steps.mp4"></video>
+                  </td>
+                  <td>
+                    <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/1_comparison/GAN/leaf-7260246_1280_1_steps.mp4"></video>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/1_comparison/SVD/power-station-6579092_1280_25_steps.mp4"></video>
+                  </td>
+                  <td>
+                    <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/1_comparison/SVD/power-station-6579092_1280_16_steps.mp4"></video>
+                  </td>
+                  <td>
+                    <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/1_comparison/SVD/power-station-6579092_1280_8_steps.mp4"></video>
+                  </td>
+                  <td>
+                    <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/1_comparison/AnimateLCM/power-station-6579092_1280_4_steps.mp4"></video>
+                  </td>
+                  <td>
+                    <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/1_comparison/GAN/power-station-6579092_1280_1_steps.mp4"></video>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/1_comparison/SVD/test_image_25_steps.mp4"></video>
+                  </td>
+                  <td>
+                    <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/1_comparison/SVD/test_image_16_steps.mp4"></video>
+                  </td>
+                  <td>
+                    <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/1_comparison/SVD/test_image_8_steps.mp4"></video>
+                  </td>
+                  <td>
+                    <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/1_comparison/AnimateLCM/test_image_4_steps.mp4"></video>
+                  </td>
+                  <td>
+                    <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/1_comparison/GAN/test_image_1_steps.mp4"></video>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/1_comparison/SVD/training-8122941_1280_25_steps.mp4"></video>
+                  </td>
+                  <td>
+                    <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/1_comparison/SVD/training-8122941_1280_16_steps.mp4"></video>
+                  </td>
+                  <td>
+                    <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/1_comparison/SVD/training-8122941_1280_8_steps.mp4"></video>
+                  </td>
+                  <td>
+                    <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/1_comparison/AnimateLCM/training-8122941_1280_4_steps.mp4"></video>
+                  </td>
+                  <td>
+                    <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/1_comparison/GAN/training-8122941_1280_1_steps.mp4"></video>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/1_comparison/SVD/woman-4549327_1280_25_steps.mp4"></video>
+                  </td>
+                  <td>
+                    <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/1_comparison/SVD/woman-4549327_1280_16_steps.mp4"></video>
+                  </td>
+                  <td>
+                    <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/1_comparison/SVD/woman-4549327_1280_8_steps.mp4"></video>
+                  </td>
+                  <td>
+                    <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/1_comparison/AnimateLCM/woman-4549327_1280_4_steps.mp4"></video>
+                  </td>
+                  <td>
+                    <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/1_comparison/GAN/woman-4549327_1280_1_steps.mp4"></video>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/1_comparison/SVD/woman-5667299_1280_25_steps.mp4"></video>
+                  </td>
+                  <td>
+                    <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/1_comparison/SVD/woman-5667299_1280_16_steps.mp4"></video>
+                  </td>
+                  <td>
+                    <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/1_comparison/SVD/woman-5667299_1280_8_steps.mp4"></video>
+                  </td>
+                  <td>
+                    <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/1_comparison/AnimateLCM/woman-5667299_1280_4_steps.mp4"></video>
+                  </td>
+                  <td>
+                    <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/1_comparison/GAN/woman-5667299_1280_1_steps.mp4"></video>
+                  </td>
+                </tr>
+
+                <tr align="center">
+                  <td rowspan="2" width="20%">
+                    SVD <a href="https://arxiv.org/abs/2311.15127">[1]</a> </br> 25 steps
+                  </td>
+                  <td rowspan="2" width="20%">
+                    SVD <a href="https://arxiv.org/abs/2311.15127">[1]</a> </br> 16 steps
+                  </td>
+                  <td rowspan="2" width="20%">
+                    SVD <a href="https://arxiv.org/abs/2311.15127">[1]</a> </br> 8 steps
+                  </td>
+                  <td rowspan="2" width="20%">
+                    AnimateLCM <a href="https://arxiv.org/abs/2402.00769">[2]</a>  </br> 4 steps
+                  </td>
+                  <td rowspan="2" width="20%">
+                    <p style="color:red;">Ours</br> 1 step </p> 
+                  </td>
+                </tr>
+                
+              </tbody>
+
+            </table>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
   
 
+  <section class="section hero is-small">
+    <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-">
+
+          <h2 class="title is-3">Ablation Analysis</h2>
+          <div class="content has-text-justified">
+            <table width="100%" border="0" align="center">
+              <tbody>
+                  <tr>
+                    <td colspan="4" style="text-align: left;">
+                      <b>In this section, we provide video ablation results as mentioned in the paper.</b>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/2_ablation/dis_-2_-1/0a096a9a-96b3-44f4-a1b3-b81ade922b83_1_steps.mp4"></video>
+                    </td>
+                    <td>
+                      <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/2_ablation/dis_-1_-1/0a096a9a-96b3-44f4-a1b3-b81ade922b83_1_steps.mp4"></video>
+                    </td>
+                    <td>
+                      <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/2_ablation/dis_0_1/0a096a9a-96b3-44f4-a1b3-b81ade922b83_1_steps.mp4"></video>
+                    </td>
+                    <td>
+                      <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/2_ablation/dis_1_1/0a096a9a-96b3-44f4-a1b3-b81ade922b83_1_steps.mp4"></video>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/2_ablation/dis_-2_-1/0b8a8c41-2e76-494d-87d5-53f1f75d5281_1_steps.mp4"></video>
+                    </td>
+                    <td>
+                      <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/2_ablation/dis_-1_-1/0b8a8c41-2e76-494d-87d5-53f1f75d5281_1_steps.mp4"></video>
+                    </td>
+                    <td>
+                      <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/2_ablation/dis_0_1/0b8a8c41-2e76-494d-87d5-53f1f75d5281_1_steps.mp4"></video>
+                    </td>
+                    <td>
+                      <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/2_ablation/dis_1_1/0b8a8c41-2e76-494d-87d5-53f1f75d5281_1_steps.mp4"></video>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/2_ablation/dis_-2_-1/0b939ec1-8d3b-4efa-9ee6-c0fd82f7eb25_1_steps.mp4"></video>
+                    </td>
+                    <td>
+                      <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/2_ablation/dis_-1_-1/0b939ec1-8d3b-4efa-9ee6-c0fd82f7eb25_1_steps.mp4"></video>
+                    </td>
+                    <td>
+                      <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/2_ablation/dis_0_1/0b939ec1-8d3b-4efa-9ee6-c0fd82f7eb25_1_steps.mp4"></video>
+                    </td>
+                    <td>
+                      <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/2_ablation/dis_1_1/0b939ec1-8d3b-4efa-9ee6-c0fd82f7eb25_1_steps.mp4"></video>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/2_ablation/dis_-2_-1/0c4a9f46-0abb-4560-9789-9f5babe3e67d_1_steps.mp4"></video>
+                    </td>
+                    <td>
+                      <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/2_ablation/dis_-1_-1/0c4a9f46-0abb-4560-9789-9f5babe3e67d_1_steps.mp4"></video>
+                    </td>
+                    <td>
+                      <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/2_ablation/dis_0_1/0c4a9f46-0abb-4560-9789-9f5babe3e67d_1_steps.mp4"></video>
+                    </td>
+                    <td>
+                      <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/2_ablation/dis_1_1/0c4a9f46-0abb-4560-9789-9f5babe3e67d_1_steps.mp4"></video>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/2_ablation/dis_-2_-1/0f9eb46a-b130-44ea-a485-2114d15a2f9b_1_steps.mp4"></video>
+                    </td>
+                    <td>
+                      <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/2_ablation/dis_-1_-1/0f9eb46a-b130-44ea-a485-2114d15a2f9b_1_steps.mp4"></video>
+                    </td>
+                    <td>
+                      <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/2_ablation/dis_0_1/0f9eb46a-b130-44ea-a485-2114d15a2f9b_1_steps.mp4"></video>
+                    </td>
+                    <td>
+                      <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/2_ablation/dis_1_1/0f9eb46a-b130-44ea-a485-2114d15a2f9b_1_steps.mp4"></video>
+                    </td>
+                  </tr>
+                  <tr align="center">
+                    <td rowspan="2" width="25%">
+                      P<sub>mean</sub> = -2 </br> P<sub>std</sub> = -1 </p> 
+                    </td>
+                    <td rowspan="2" width="25%">
+                      <p style="color:red;">P<sub>mean</sub> = -1 </br> P<sub>std</sub> = -1 </p>
+                    </td>
+                    <td rowspan="2" width="25%">
+                      P<sub>mean</sub> = 0 </br> P<sub>std</sub> = 1 </p> 
+                    </td>
+                    <td rowspan="2" width="25%">
+                      P<sub>mean</sub> = 1 </br> P<sub>std</sub> = 1 </p> 
+                    </td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
 
 
+  <section class="section hero is-light">
+    <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-">
+
+          <h2 class="title is-3">Demo</h2>
+          <div class="content has-text-justified">
+            <table width="100%" border="0" align="center">
+              <tbody>
+                <tr>
+                  <td colspan="1" style="text-align: left;">
+                    <b>In this section, we provide a screen recording demo showing the efficiency of our method.</b>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <video playsinline autoplay="autoplay" loop="loop" muted="muted" type="video/mp4" class="video-teaser" src="assets/videos/record_720p.mp4"></video>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
 
   <!--BibTex citation -->
   <section class="section" id="BibTeX">

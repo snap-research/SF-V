@@ -1,12 +1,12 @@
 ## SF-V <br><sub> Single Forward Video Generation Model</sub>
 
-[![arXiv](https://img.shields.io/badge/arXiv)](https://arxiv.org/abs/)
+[![arXiv](https://img.shields.io/badge/arXiv-2406.04324-b31b1b)](https://arxiv.org/abs/2406.04324)
 [![Project Page](https://img.shields.io/badge/Project-Website-orange)](https://snap-research.github.io/SF-V/)
 
 This respository contains the code for the paper [SF-V: Single Forward Video Generation Model](https://arxiv.org/abs/).
 For more visualization results, please check our [project page](https://snap-research.github.io/SF-V/).
 
-> **[SF-V: Single Forward Video Generation Model](https://arxiv.org/abs/)** \
+> **[SF-V: Single Forward Video Generation Model](https://arxiv.org/abs/2406.04324)** \
 > [Zhixing Zhang](https://zhang-zx.github.io/) <sup>1,2</sup>,
 > [Yanyu Li](https://scholar.google.com/citations?user=XUj8koUAAAAJ) <sup>1</sup>,
 > [Yushu Wu](https://scholar.google.com/citations?user=3hEDsFYAAAAJ) <sup>1</sup>,
@@ -43,5 +43,10 @@ For more visualization results, please check our [project page](https://snap-res
 If our work helps you, please consider to cite our paper. Thanks!
 
 ```BibTeX
-[TBA]
+@article{zhang2022sfv,
+  title={SF-V: Single Forward Video Generation Model},
+  author={Zhang, Zhixing and Li, Yanyu and Wu, Yushu and Xu, Yanwu and Kag, Anil and Skorokhodov, Ivan and Menapace, Willi and Siarohin, Aliaksandr and Cao, Junli and Metaxas, Dimitris and Tulyakov, Sergey and Ren, Jian},
+  journal={arXiv preprint arXiv:2406.04324},
+  year={2024}
+}
 ```

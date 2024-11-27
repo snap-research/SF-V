@@ -43,10 +43,12 @@ For more visualization results, please check our [project page](https://snap-res
 If our work helps you, please consider to cite our paper. Thanks!
 
 ```BibTeX
-@article{zhang2022sfv,
-  title={SF-V: Single Forward Video Generation Model},
-  author={Zhang, Zhixing and Li, Yanyu and Wu, Yushu and Xu, Yanwu and Kag, Anil and Skorokhodov, Ivan and Menapace, Willi and Siarohin, Aliaksandr and Cao, Junli and Metaxas, Dimitris and Tulyakov, Sergey and Ren, Jian},
-  journal={arXiv preprint arXiv:2406.04324},
-  year={2024}
+@inproceedings{
+zhang2024sfv,
+title={{SF}-V: Single Forward Video Generation Model},
+author={Zhixing Zhang and Yanyu Li and Yushu Wu and yanwu xu and Anil Kag and Ivan Skorokhodov and Willi Menapace and Aliaksandr Siarohin and Junli Cao and Dimitris N. Metaxas and Sergey Tulyakov and Jian Ren},
+booktitle={The Thirty-eighth Annual Conference on Neural Information Processing Systems},
+year={2024},
+url={https://openreview.net/forum?id=PVgAeMm3MW}
 }
 ```
